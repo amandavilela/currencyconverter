@@ -1,0 +1,24 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "A demo project created for DevFest London",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "Amanda Vilela",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-responsive": "^2.8.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

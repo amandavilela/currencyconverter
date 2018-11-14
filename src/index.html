@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#06e2f8">
+    <link rel="manifest" href="/manifest.json">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main>
+        <h1>Currency Converter</h1>
+        <p class="subtitle">Insert the values below:</p>
+        <div class="form">
+            <select class="base-currency">
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PHP">PHP</option>
+                <option value="PLN">PLN</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="USD" selected>USD</option>
+                <option value="ZAR">ZAR</option>
+            </select>
+            <p>to</p>
+            <select class="converted-currency">
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL" selected>BRL</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PHP">PHP</option>
+                <option value="PLN">PLN</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="USD">USD</option>
+                <option value="ZAR">ZAR</option>
+            </select>
+            <input class="base-value" placeholder="Amount" value="1" />
+            <input class="converted-value" disabled placeholder="Result" />
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        /*const value = document.querySelector(".value");
+        let currencyValue = document.querySelector(".currency-value");
+        const result = document.querySelector(".result");
+        const resultValue = document.querySelector(".result-value");
+        localStorage.setItem("currencyValue", currencyValue.value);
+
+        window.addEventListener("offline", function () {
+            currencyValue.value = localStorage.getItem("currencyValue");
+            currencyValue.disabled = true;
+            console.log(currencyValue);
+        }, false);
+
+        calc();
+
+        value.addEventListener('change', calc);
+        currencyValue.addEventListener('change', calc);
+        resultValue.addEventListener('change', calc);
+
+        async function calc() {
+            const url = `https://api.exchangeratesapi.io/latest?base=${currencyValue.value}`;
+            let resultRate = 0;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                resultRate = data.rates[resultValue.value];
+                result.value = (resultRate * value.value).toFixed(2);
+            }
+            catch (err) {
+                if ('caches' in window) {
+                    caches.match(url).then(function(response) {
+                      if (response) {
+                        response.json().then(function updateFromCache(json) {
+                          resultRate = json.rates[resultValue.value];
+                          result.value = (resultRate * value.value).toFixed(2);
+                        });
+                      }
+                    });
+                }
+            }
+        }*/
+    </script>
+  </body>
+</html>

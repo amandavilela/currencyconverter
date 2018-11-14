@@ -1,0 +1,32 @@
+{
+  "name": "Currency Converter",
+  "short_name": "CConverter",
+  "theme_color": "#06f8c5",
+  "background_color": "#06f8c5",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/?utm_source=homescreen",
+  "lang": "pt-BR",
+  "orientation": "any",
+  "icons": [{
+      "src": "img/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "img/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "img/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "img/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }]
+}

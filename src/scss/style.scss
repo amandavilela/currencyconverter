@@ -1,0 +1,114 @@
+/* merriweather-regular - latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/merriweather-v19-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Regular'), local('Merriweather-Regular'),
+       url('../fonts/merriweather-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather-v19-latin-regular.svg#Merriweather') format('svg'); /* Legacy iOS */
+}
+
+/* merriweather-900 - latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/merriweather-v19-latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Black'), local('Merriweather-Black'),
+       url('../fonts/merriweather-v19-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather-v19-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather-v19-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather-v19-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather-v19-latin-900.svg#Merriweather') format('svg'); /* Legacy iOS */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: #06f8c5;
+    color: #222;
+}
+
+main {
+    width: 94%;
+    max-width: 352px;
+    margin: auto;
+    text-align: center;
+}
+
+.form {
+    display: grid;
+    grid-template-areas:
+    "title title title"
+    "select to select2"
+    "input to input2";
+    padding: 40px 20px;
+    box-shadow: 0 2px 6px 2px rgba(0,0,0,.1);
+    background: #fff;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 0 32px 0;
+    font-size: 1.6rem;
+    grid-area: title;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-family: 'Merriweather', serif;
+    background: #ffdbf8;
+    display: inline-block;
+    transform: translateY(38%);
+}
+
+select {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 12px;
+    background: #fff;
+    border-radius: 0;
+    border: solid 1px #ccc;
+    margin: 0;
+    font-size: 16px;
+    background: url('../img/arrow.png') 92% center no-repeat;
+}
+
+.base-currency { grid-area: select; }
+.converted-currency { grid-area: select2; }
+
+input {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 12px;
+    background: #fff;
+    border-radius: 0;
+    border: solid 1px #ccc;
+    margin: 0;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.base-value { grid-area: input; }
+.converted-value { grid-area: input2; }
+
+p {
+    margin: auto;
+    grid-area: to;
+    padding: 8px;
+}
