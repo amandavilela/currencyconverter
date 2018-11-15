@@ -12,6 +12,7 @@ window.addEventListener('offline', () => {
 
 window.addEventListener('online', () => {
     toggleOffileMessage(false);
+    baseCurrency.disabled = false;
 });
 
 function toggleOffileMessage(showMessage) {
