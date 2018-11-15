@@ -1,0 +1,88 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: #06f8c5;
+    color: #222;
+}
+
+.offline-message {
+    position: fixed;
+    width: 100%;
+    background: #f8a706;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+main {
+    width: 94%;
+    max-width: 352px;
+    margin: auto;
+    text-align: center;
+}
+
+.form {
+    display: grid;
+    grid-template-areas:
+    "title title title"
+    "select to select2"
+    "input to input2";
+    padding: 40px 20px;
+    box-shadow: 0 2px 6px 2px rgba(0,0,0,.1);
+    background: #fff;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 0 32px 0;
+    font-size: 1.6rem;
+    grid-area: title;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-family: 'Merriweather', serif;
+    background: #ffdbf8;
+    display: inline-block;
+    transform: translateY(38%);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border-radius: 0;
+    border: solid 1px #ccc;
+    margin: 0;
+    font-size: 16px;
+    background: url('../img/arrow.png') 92% center no-repeat;
+}
+
+.base-currency { grid-area: select; }
+.converted-currency { grid-area: select2; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border-radius: 0;
+    border: solid 1px #ccc;
+    margin: 0;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.base-value { grid-area: input; }
+.converted-value { grid-area: input2; }
+
+p {
+    margin: auto;
+    grid-area: to;
+    padding: 8px;
+}
