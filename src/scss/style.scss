@@ -42,6 +42,16 @@ body {
     color: #222;
 }
 
+.offline-message {
+    position: fixed;
+    width: 100%;
+    background: #f8a706;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
 main {
     width: 94%;
     max-width: 352px;
@@ -80,6 +90,7 @@ h1 {
 select {
     width: 100%;
     -webkit-appearance: none;
+    appearance: none;
     padding: 12px;
     background: #fff;
     border-radius: 0;
@@ -94,7 +105,6 @@ select {
 
 input {
     width: 100%;
-    -webkit-appearance: none;
     padding: 12px;
     background: #fff;
     border-radius: 0;

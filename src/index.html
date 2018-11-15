@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="offline-message"></div>
     <main>
         <h1>Currency Converter</h1>
         <p class="subtitle">Insert the values below:</p>
@@ -89,48 +90,5 @@
         </div>
     </main>
     <script src="js/scripts.js"></script>
-    <script type="text/javascript">
-        /*const value = document.querySelector(".value");
-        let currencyValue = document.querySelector(".currency-value");
-        const result = document.querySelector(".result");
-        const resultValue = document.querySelector(".result-value");
-        localStorage.setItem("currencyValue", currencyValue.value);
-
-        window.addEventListener("offline", function () {
-            currencyValue.value = localStorage.getItem("currencyValue");
-            currencyValue.disabled = true;
-            console.log(currencyValue);
-        }, false);
-
-        calc();
-
-        value.addEventListener('change', calc);
-        currencyValue.addEventListener('change', calc);
-        resultValue.addEventListener('change', calc);
-
-        async function calc() {
-            const url = `https://api.exchangeratesapi.io/latest?base=${currencyValue.value}`;
-            let resultRate = 0;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                resultRate = data.rates[resultValue.value];
-                result.value = (resultRate * value.value).toFixed(2);
-            }
-            catch (err) {
-                if ('caches' in window) {
-                    caches.match(url).then(function(response) {
-                      if (response) {
-                        response.json().then(function updateFromCache(json) {
-                          resultRate = json.rates[resultValue.value];
-                          result.value = (resultRate * value.value).toFixed(2);
-                        });
-                      }
-                    });
-                }
-            }
-        }*/
-    </script>
   </body>
 </html>

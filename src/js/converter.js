@@ -1,23 +1,28 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-        .then(reg => {
-            console.info('Service Worker Registered', reg);
-        })
-        .catch(err => {
-            console.info('Error registering Service Worker', err);
-        });
-}
-
-const baseCurrency = document.querySelector('.base-currency')
+const baseCurrency = document.querySelector('.base-currency');
 const convertedCurrency = document.querySelector('.converted-currency');
 const baseValue = document.querySelector('.base-value');
 const convertedValue = document.querySelector('.converted-value');
 const apiUrl = `https://api.exchangeratesapi.io/latest?base=${baseCurrency.value}`;
 
 window.addEventListener('offline', () => {
+    toggleOffileMessage(true);
     baseCurrency.value = localStorage.getItem('baseCurrency');
     baseCurrency.disabled = true;
 });
+
+window.addEventListener('online', () => {
+    toggleOffileMessage(false);
+});
+
+function toggleOffileMessage(showMessage) {
+    const offlineMessage = document.querySelector('.offline-message');
+    const lastConversionDate = new Date(localStorage.getItem('lastConversionDate'));
+    offlineMessage.innerHTML = lastConversionDate ?
+        `You are offline, rates from ${lastConversionDate.getMonth()}/
+        ${lastConversionDate.getDate()}/${lastConversionDate.getFullYear()} -
+        ${lastConversionDate.getHours()}:${lastConversionDate.getMinutes()}` : '';
+    offlineMessage.style.display = showMessage == true ? 'block' : 'none';
+}
 
 (function initialize() {
     convertCurrency();
@@ -29,8 +34,8 @@ window.addEventListener('offline', () => {
 })();
 
 function baseCurrencyChangeHandler() {
-  localStorage.setItem('baseCurrency', baseCurrency.value);
-  convertCurrency();
+    localStorage.setItem('baseCurrency', baseCurrency.value);
+    convertCurrency();
 }
 
 async function getConversionRate(currency) {
@@ -42,5 +47,6 @@ async function getConversionRate(currency) {
 
 async function convertCurrency() {
     const conversionRate = await getConversionRate(convertedCurrency.value);
+    localStorage.setItem('lastConversionDate', new Date());
     convertedValue.value = (baseValue.value * conversionRate).toFixed(2);
 }

@@ -1,5 +1,6 @@
 const gulp = require('gulp'),
 autoprefixer = require('gulp-autoprefixer'),
+concat = require('gulp-concat');
 sass = require('gulp-sass'),
 browserSync = require('browser-sync').create();
 responsive = require('gulp-responsive');
@@ -7,6 +8,7 @@ imgMin = require('gulp-imagemin');
 
 gulp.task('js', () => {
   gulp.src('./src/js/*.js')
+  .pipe(concat('scripts.js'))
   .pipe(gulp.dest('./public/js/'));
 });
 
