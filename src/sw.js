@@ -46,7 +46,7 @@ this.addEventListener('activate', event => {
     return self.clients.claim();
 });
 
-self.addEventListener('fetch', event => {
+this.addEventListener('fetch', event => {
     console.info('[Service Worker] Fetch', event.request.url);
 
     const dataUrl = 'https://api.exchangeratesapi.io/latest?base=';
